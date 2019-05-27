@@ -1,0 +1,20 @@
+{
+  "name": "creative_home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "lite-server",
+    "sass": "node-sass --watch src/sass/style.scss -o src/css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.3",
+    "node-sass": "^4.12.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {}
+}
