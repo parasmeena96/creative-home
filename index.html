@@ -1,27 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+    <title>creative</title>
 </head>
-<body>
-    
 
-    <h1 class="text-center">hello</h1>
-    <script src="../js/index.js"></script>
+<body>
+
+    <header>
+        <div id="slider-animation" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#slider-animation" data-slide-to="0" class="active"></li>
+                <li data-target="#slider-animation" data-slide-to="1"></li>
+                <li data-target="#slider-animation" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="src/img/hero.jpg" alt="hero_banner_1">
+                    <div class="headingOfslider text-uppercase">
+                        <div class="text-box">
+                            <h5 class="wow slideInLeft" data-wow-duration="2s">would you like to be</h5>
+                            <h2 class="wow slideInRight" data-wow-duration="2s">creative</h2>
+                            <p class="wow slideInRight " data-wow-duration="2s">with amazing thefox design </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img/hero.jpg" alt="hero_banner_2">
+                    <div class="headingOfslider text-uppercase">
+                        <div class="text-box">
+                            <h5 class="wow fadeInDown" data-wow-duration="2s">would you like to be</h5>
+                            <h2 class="wow slideInUp" data-wow-duration="2s">creative</h2>
+                            <p class="wow fadeInDown " data-wow-duration="2s">with amazing thefox design </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/img/hero.jpg" alt="hero_banner_3">
+                    <div class="headingOfslider text-uppercase">
+                        <div class="text-box">
+                            <h5 class="wow fadeInUp" data-wow-duration="2s">would you like to be</h5>
+                            <h2 class="wow fadeInDown" data-wow-duration="2s">creative</h2>
+                            <p class="wow fadeInUp " data-wow-duration="2s">with amazing thefox design </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#slider-animation" data-slide="prev">
+                <!-- <span class="carousel-control-prev-icon"></span> -->
+                <figure><img src="src/img/left.png" alt="leftArrow"></figure>
+            </a>
+            <a class="carousel-control-next" href="#slider-animation" data-slide="next">
+                <!-- <span class="carousel-control-next-icon"></span> -->
+                <figure><img src="src/img/right.png" alt="rightArrow"></figure>
+            </a>
+
+        </div>
+        <div class="header_main d-flex mx-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="logo flex-fill">
+                        <figure><img src="src/img/logo.png" alt="logo"></figure>
+                    </div>
+                    <nav class="flex-grow-2">
+                        <ul>
+                            <li><a href="">home</a></li>
+                            <li><a href="">page</a></li>
+                            <li><a href="">portfolio</a></li>
+                            <li><a href="">blog</a></li>
+                            <li><a href="">shop</a></li>
+                            <li><a href="">travel</a></li>
+                            <li><a href="">shortCodes</a></li>
+                            <li><a href="">features</a></li>
+                            <li><a href="">contact</a></li>
+                            <li><a href="#" class="search_Icon"><i class="fa fa-search" aria-hidden="true"
+                                        id="seacrh_"></i></a>
+                            </li>
+                            <input type="text" name="search" id="searchPart" class="form-control">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="src/js/index.js"></script>
 </body>
+
 </html>

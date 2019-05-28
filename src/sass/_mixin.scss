@@ -1,1 +1,12 @@
-
+@mixin navButton {
+    color: white;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    &:hover{
+        border: 2px solid white;
+        text-decoration: none;
+        color:white;
+        border-radius: 5px;
+    }
+}
