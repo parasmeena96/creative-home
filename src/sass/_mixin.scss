@@ -1,12 +1,27 @@
 @mixin navButton {
+  color: white;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid white;
+    text-decoration: none;
     color: white;
-    text-transform: capitalize;
-    padding: 10px 15px;
+    border-radius: 5px;
+  }
+}
+
+@mixin special_button {
+  padding: 5px 10px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-transform: capitalize;
+  transition: .7s;
+  &:hover {
+    background: #1bbc9b;
     border: 2px solid transparent;
-    &:hover{
-        border: 2px solid white;
-        text-decoration: none;
-        color:white;
-        border-radius: 5px;
-    }
+    text-decoration: none;
+    transition: .7s;
+  }
 }
