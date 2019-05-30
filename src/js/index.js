@@ -25,3 +25,4 @@ document.getElementById('moar').onclick = function () {
     section.className = 'section--purple wow fadeInDown';
     this.parentNode.insertBefore(section, this);
 };
+
