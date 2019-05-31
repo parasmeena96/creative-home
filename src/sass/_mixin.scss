@@ -53,7 +53,7 @@
 // media query start here
 // large_destop
 @mixin large_desktop {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (max-width: 1199px) {
     @content;
   }
 }
@@ -61,7 +61,7 @@
 
 //destop
 @mixin desktop {
-  @media only screen and (min-width: 992px) {
+  @media only screen and (max-width: 991px) {
     @content;
   }
 }
@@ -69,7 +69,7 @@
 
 //tablets
 @mixin tablets {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 767px) {
     @content;
   }
 }
@@ -77,15 +77,24 @@
 
  // media for landscape_phones
  @mixin landscape_phones {
-  @media only screen and (min-width: 576px) {
+  @media only screen and (max-width: 575px) {
     @content;
   }
 }
 // media for landscape_phones
 
+// iphone6
+@mixin middleIphone {
+  @media only screen and (max-width: 480px) {
+   @content; 
+  }
+}
+// iphone6
+
+
 // media for small iphones
 @mixin iphone5S {
-  @media only screen and (min-width: 320px) {
+  @media only screen and (max-width: 320px) {
     @content;
   }
 }

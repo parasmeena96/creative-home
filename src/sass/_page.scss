@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
 header {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
   background-size: cover;
   min-height: 625px;
-  width: 100%;
   position: relative;
   .headingOfslider {
     width: 100%;
@@ -12,94 +14,109 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include desktop {
+      min-height: 175px;
+    }
+    @include tablets {
+      min-height: 170px;
+    }
+    @include landscape_phones {
+      min-height: 165px;
+    }
   }
   .header_main {
     position: absolute;
     top: 25px;
     width: 100%;
+    z-index: 2;
     .logo {
       float: left;
+      @include desktop {
+        width: 12%;
+      }
+      @include tablets {
+        width: 20%;
+      }
+      @include iphone5S {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+      }
     }
     nav {
-      width: 75%;
-      display: block;
+      float: right;
+      @include tablets {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background: #1bbc9bbd;
+        padding: 25px;
+      }
+      li {
+        float: left;
+        list-style: none;
+        @include tablets {
+          float: none;
+          margin: 2% 0;
+        }
+        .search_Icon {
+          border: 0;
+          padding: 0;
+        }
+        .search_Icon:hover {
+          border: 0;
+        }
+        a {
+          @include navButton;
+          @include tablets {
+            width: 100%;
+            display: inline-block;
+          }
+          @include large_desktop {
+            padding: 5px 7px;
+          }
+        }
+      }
+    }
 
-      @include iphone5S {
-        display: none;
-      }
-      @include landscape_phones {
-        display: none;
-      }
-      @include tablets {
-        display: none;
-      }
-      @include desktop {
-        display: block;
-        float: right;
-      }
-      @include large_desktop {
-        display: block;
-      }
-    }
-    .menuBar {
-      display: none;
-      i {
-        font-size: 30px;
-        cursor: pointer;
-      }
-      @include iphone5S {
-        display: block;
-      }
-      @include landscape_phones {
-        display: block;
-      }
-      @include tablets {
-        display: block;
-        float: right;
-        z-index: 9999;
-      }
-      @include desktop {
-        display: none;
-      }
-      @include large_desktop {
-        display: none;
-      }
-    }
     .innerOfHeader {
       display: inline-block;
       width: 100%;
-    }
-  }
-  li {
-    display: inline;
-    .search_Icon {
-      border: 0;
-      padding: 0;
-    }
-    .search_Icon:hover {
-      border: 0;
-    }
-    a {
-      @include navButton;
-
-      @include iphone5S {
-      }
+      position: relative;
       @include landscape_phones {
+        padding: 0 10px;
       }
-      @include tablets {
-      }
-      @include desktop {
-        padding: 7px;
-      }
-      @include large_desktop {
-        padding: 10px 15px;
+      .menuBar {
+        display: none;
+        @include tablets {
+          display: block;
+          float: right;
+          position: absolute;
+          right: 0;
+        }
+        @include landscape_phones {
+          right: 10px;
+        }
+        i {
+          font-size: 30px;
+          color: white;
+          cursor: pointer;
+        }
       }
     }
   }
+
   .controlOfMainSlider {
     position: absolute;
     top: 50%;
     width: 100%;
+    @include landscape_phones {
+      img {
+        width: 50%;
+      }
+    }
   }
 }
 input#searchPart {
@@ -121,7 +138,18 @@ input#searchPart {
   min-height: 150px;
   padding-top: 2%;
   left: 50%;
-
+  @include tablets {
+    width: 39%;
+  }
+  @include landscape_phones {
+    width: 55%;
+  }
+  @include middleIphone {
+    width: 66%;
+  }
+  @include iphone5S {
+    width: 100%;
+  }
   h2 {
     font-size: 60px;
     color: #01ffe5;
@@ -135,6 +163,28 @@ input#searchPart {
     background: #01ffe5;
     top: 54.5%;
     left: 8.2%;
+    @include large_desktop {
+      left: 3%;
+    }
+    @include desktop {
+      left: 0;
+      width: 30px;
+    }
+    @include tablets {
+      top: 51.5%;
+      width: 32px;
+    }
+    @include landscape_phones {
+      top: 51.1%;
+      width: 40px;
+    }
+    @include middleIphone {
+      top: 50.1%;
+    }
+    @include iphone5S {
+      top: 49%;
+      width: 42px;
+    }
   }
   h2::after {
     content: "";
@@ -144,6 +194,30 @@ input#searchPart {
     background: #01ffe5;
     top: 54.9%;
     right: 8.5%;
+    @include large_desktop {
+      right: 3.5%;
+      top: 54%;
+    }
+    @include desktop {
+      right: 0;
+      width: 30px;
+      top: 53%;
+    }
+    @include tablets {
+      top: 51.5%;
+      width: 32px;
+    }
+    @include landscape_phones {
+      top: 51.1%;
+      width: 40px;
+    }
+    @include middleIphone {
+      top: 50.1%;
+    }
+    @include iphone5S {
+      top: 49%;
+      width: 42px;
+    }
   }
 }
 
@@ -154,10 +228,31 @@ input#searchPart {
   width: 100%;
   .amazingUpContent {
     width: 100%;
+    @include landscape_phones {
+      padding: 0 10px;
+    }
     .amazingItem {
       max-width: 350px;
       min-height: 200px;
       width: 100%;
+      @include large_desktop {
+        max-width: 315px;
+      }
+      @include desktop {
+        max-width: 235px;
+      }
+      @include tablets {
+        max-width: 260px;
+      }
+      @include landscape_phones {
+        max-width: unset;
+        text-align: center;
+      }
+      span {
+        @include desktop {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
@@ -179,17 +274,29 @@ input#searchPart {
       overflow: hidden;
       margin: 0;
       padding: 0;
+      @include landscape_phones {
+        width: 50%;
+      }
     }
     .button_special-section {
       width: 100%;
     }
     .filter-button {
       @include special_button;
+      @include iphone5S {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
     }
   }
   .innerContent_special {
     display: inline-block;
     width: 100%;
+  }
+  #portfolio {
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -253,15 +360,38 @@ input#searchPart {
   .innerContentDoYouLike {
     display: inline-block;
     width: 100%;
+    @include tablets {
+      text-align: center;
+    }
+    h3 {
+      @include desktop {
+        font-size: 22px;
+      }
+      @include tablets {
+        text-align: center;
+        float: none !important;
+      }
+    }
     button {
       @include whiteOutLiniBTN;
+      @include tablets {
+        float: none;
+      }
     }
   }
 }
 //our skills
 .itemOur {
-  width: 100%;
+  width: 50%;
   padding: 0 15px;
+  @include tablets {
+    width: 100%;
+  }
+  button {
+    @include iphone5S {
+      width: 100%;
+    }
+  }
 }
 .progress .progress-bar {
   animation-name: animateBar;
@@ -295,15 +425,23 @@ input#searchPart {
   border-radius: 5px;
   p {
     font-size: 16px;
+    @include tablets {
+      font-size: 14px;
+    }
+    @include middleIphone {
+      font-weight: 500 !important;
+    }
   }
-}
-
-.count-title {
-  font-size: 40px;
-  font-weight: normal;
-  margin-top: 10px;
-  margin-bottom: 0;
-  text-align: center;
+  .count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    @include middleIphone {
+      font-size: 30px;
+    }
+  }
 }
 
 .count-text {
@@ -322,9 +460,14 @@ input#searchPart {
 }
 .countDown {
   background: #e36968;
+  overflow: hidden;
   .counterInner {
     width: 100%;
     display: inline-block;
+    .col {
+      width: 25%;
+      padding: 0;
+    }
   }
 }
 $font-primary: #3d3d3d;
@@ -335,6 +478,12 @@ $font-primary: #3d3d3d;
   background-blend-mode: hard-light;
   li {
     float: left;
+    @include large_desktop {
+      width: 30%;
+    }
+    @include middleIphone {
+      width: 27%;
+    }
   }
   li:nth-child(3n-1) {
     margin: 0 5%;
@@ -345,6 +494,9 @@ $font-primary: #3d3d3d;
     color: white;
     #carouselExampleControls {
       padding: 25px 25px 0;
+      @include desktop {
+        padding: 0 25px 0;
+      }
       .carousel-inner {
         padding: 0 30px;
         .carousel-item {
@@ -381,6 +533,16 @@ $font-primary: #3d3d3d;
       z-index: 9999;
     }
   }
+  .rightImages_testimonial {
+    @include tablets {
+      margin-top: 1rem;
+    }
+    img {
+      @include large_desktop {
+        width: 100%;
+      }
+    }
+  }
 }
 //listpart
 .headListPart {
@@ -389,6 +551,20 @@ $font-primary: #3d3d3d;
   .item_listPart {
     max-width: 270px;
     width: 100%;
+    @include large_desktop {
+      max-width: 240px;
+    }
+    @include desktop {
+      max-width: 175px;
+    }
+    @include tablets {
+      max-width: unset;
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+    @include landscape_phones {
+      text-align: center;
+    }
     li {
       margin-bottom: 3%;
       list-style-type: square;
@@ -414,6 +590,9 @@ $font-primary: #3d3d3d;
   position: relative;
   .projectHead {
     min-height: 394px;
+    @include iphone5S {
+      min-height: 347px;
+    }
   }
 }
 
@@ -639,15 +818,32 @@ $font-primary: #3d3d3d;
   display: inline-block;
   width: 100%;
   .unlimitedItem {
-    max-width: 450px;
-    width: 100%;
+    width: 33.3%;
     padding: 25px;
+    padding: 25px;
+    @include tablets {
+      padding: 10px;
+    }
+    @include landscape_phones {
+      width: 100%;
+      text-align: center;
+    }
+    span {
+      @include tablets {
+        font-size: 14px;
+      }
+    }
     p {
       font-size: 14px;
       margin-top: 1rem;
+      @include tablets {
+        font-size: 13px;
+      }
     }
     button {
       @include whiteOutLiniBTN;
+    }
+    span {
     }
   }
 }
@@ -662,12 +858,35 @@ $font-primary: #3d3d3d;
     background: #ffffff42;
     width: 49%;
     display: inline-block;
+    @include tablets {
+      padding: 0.5rem !important;
+    }
+    @include iphone5S {
+      width: 100%;
+      text-align: center;
+    }
+    h5 {
+      @include tablets {
+        font-size: 16px;
+      }
+    }
+    p {
+      @include tablets {
+        font-size: 14px;
+      }
+    }
   }
   .keepContentRight {
     width: 49%;
     float: right;
     background: #ffffff42;
     padding: 30px !important;
+    @include tablets {
+      padding: 22px !important;
+    }
+    @include iphone5S {
+      width: 100%;
+    }
     input {
       background: #000000cc;
       border: transparent;
@@ -675,6 +894,9 @@ $font-primary: #3d3d3d;
     textarea {
       background: #000000cc;
       border: transparent;
+    }
+    button{
+      width:100%;
     }
   }
   .socialICOn {
@@ -684,12 +906,31 @@ $font-primary: #3d3d3d;
       a {
         color: white;
       }
+      @include iphone5S {
+        float: left;
+        float: none;
+        display: inline;
+      }
     }
   }
   li {
     color: white;
     list-style: none;
     margin-bottom: 5px;
+    @include tablets {
+      font-size: 14px;
+    }
+    @include middleIphone {
+      margin-bottom: 0;
+    }
+  }
+  hgroup {
+    h6 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }
 .map-container-4 {
@@ -718,6 +959,12 @@ $font-primary: #3d3d3d;
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    @include landscape_phones {
+      width: 100%;
+    }
+    @include iphone5S {
+      font-size: 12px;
+    }
   }
 }
 footer {
@@ -731,6 +978,21 @@ footer {
       width: 100%;
       min-height: 300px;
       margin: 0 10px;
+      @include large_desktop {
+        max-width: 220px;
+      }
+      @include desktop {
+        max-width: 320px;
+        margin-bottom: 1rem;
+      }
+      @include tablets {
+        max-width: 250px;
+      }
+      @include landscape_phones {
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+      }
       p {
         color: #778590;
         font-size: 14px;
@@ -748,11 +1010,20 @@ footer {
       .footerinterDownSide {
         display: inline-block;
         width: 100%;
+        @include landscape_phones {
+          width: unset;
+        }
         li {
           float: left;
           list-style: none;
           width: 50%;
           margin-bottom: 1rem;
+          @include landscape_phones {
+            width: 32%;
+          }
+          @include iphone5S {
+            width: 50%;
+          }
           a {
             color: #a2b0bb;
             &:hover {
@@ -761,6 +1032,9 @@ footer {
             figure {
               float: left;
               margin: 0 1rem 0 0;
+              @include large_desktop {
+                margin: 0 5px 0 0;
+              }
             }
             h6 {
               margin: 0;
@@ -771,6 +1045,19 @@ footer {
       .footerInnerContentFooterInter {
         float: right;
         width: 75%;
+        @include large_desktop {
+          width: 70%;
+        }
+        @include desktop {
+          width: 80%;
+        }
+        @include tablets {
+          width: 65%;
+        }
+        @include landscape_phones {
+          width: 80%;
+          text-align: left;
+        }
         span {
           color: #9eb1b8;
         }
@@ -797,6 +1084,9 @@ footer {
         }
       }
       .usefulLinks {
+        @include tablets {
+          margin-top: 1rem;
+        }
         ul {
           list-style-type: square;
           li {
@@ -804,6 +1094,9 @@ footer {
             text-transform: capitalize;
             display: list-item;
             color: #88957f;
+            @include landscape_phones {
+              display: unset;
+            }
             a {
               color: #88959e;
               &:hover {
@@ -820,6 +1113,11 @@ footer {
           color: #a2b0bb;
         }
       }
+      .usefulLinks {
+        @include large_desktop {
+          padding-left: 1rem;
+        }
+      }
     }
   }
 }
@@ -830,6 +1128,17 @@ footer {
   padding: 15px 0;
   .lowerLeftContent {
     display: inline-block;
+    @include large_desktop {
+      width: 32%;
+    }
+    @include desktop {
+      width: unset;
+      text-align: center !important;
+      margin: 0 auto !important;
+    }
+    @include middleIphone {
+      width: 100%;
+    }
     li {
       float: left;
       list-style: none;
@@ -842,6 +1151,10 @@ footer {
       span {
         color: #1cbd9c;
       }
+      @include middleIphone {
+        float: none;
+        border: 0;
+      }
     }
     li:first-child {
       margin: 0;
@@ -852,11 +1165,26 @@ footer {
     }
   }
   .rightSideFooterMenu {
+    @include large_desktop {
+      width: 68%;
+    }
+    @include desktop {
+      width: unset;
+      text-align: center;
+      margin: 0 auto;
+    }
     li {
       float: left;
       list-style: none;
       margin: 0 13px;
       text-transform: capitalize;
+      @include tablets {
+        margin: 0 6px;
+      }
+      @include middleIphone {
+        float: none;
+        display: inline;
+      }
       a {
         color: white;
         font-size: 14px;
