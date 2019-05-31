@@ -464,6 +464,9 @@ input#searchPart {
   .counterInner {
     width: 100%;
     display: inline-block;
+    @include iphone5S {
+      padding: 0 20px;
+    }
     .col {
       width: 25%;
       padding: 0;
