@@ -17,6 +17,58 @@ header {
     position: absolute;
     top: 25px;
     width: 100%;
+    .logo {
+      float: left;
+    }
+    nav {
+      width: 75%;
+      display: block;
+
+      @include iphone5S {
+        display: none;
+      }
+      @include landscape_phones {
+        display: none;
+      }
+      @include tablets {
+        display: none;
+      }
+      @include desktop {
+        display: block;
+        float: right;
+      }
+      @include large_desktop {
+        display: block;
+      }
+    }
+    .menuBar {
+      display: none;
+      i {
+        font-size: 30px;
+        cursor: pointer;
+      }
+      @include iphone5S {
+        display: block;
+      }
+      @include landscape_phones {
+        display: block;
+      }
+      @include tablets {
+        display: block;
+        float: right;
+        z-index: 9999;
+      }
+      @include desktop {
+        display: none;
+      }
+      @include large_desktop {
+        display: none;
+      }
+    }
+    .innerOfHeader {
+      display: inline-block;
+      width: 100%;
+    }
   }
   li {
     display: inline;
@@ -29,7 +81,25 @@ header {
     }
     a {
       @include navButton;
+
+      @include iphone5S {
+      }
+      @include landscape_phones {
+      }
+      @include tablets {
+      }
+      @include desktop {
+        padding: 7px;
+      }
+      @include large_desktop {
+        padding: 10px 15px;
+      }
     }
+  }
+  .controlOfMainSlider {
+    position: absolute;
+    top: 50%;
+    width: 100%;
   }
 }
 input#searchPart {
@@ -190,7 +260,7 @@ input#searchPart {
 }
 //our skills
 .itemOur {
-  width: 585px;
+  width: 100%;
   padding: 0 15px;
 }
 .progress .progress-bar {
@@ -321,12 +391,17 @@ $font-primary: #3d3d3d;
     width: 100%;
     li {
       margin-bottom: 3%;
+      list-style-type: square;
+      color: #abb1c1;
       a {
         color: #9fb1bb;
-      }
-      a:hover {
-        text-decoration: none;
-        color: #1abd9e;
+        transition: 0.5s;
+        &:hover {
+          text-decoration: none;
+          color: #1abd9e;
+          transition: 0.5s;
+          padding-left: 10px;
+        }
       }
     }
   }
@@ -652,9 +727,10 @@ footer {
     display: inline-block;
     width: 100%;
     .footerInter {
-      max-width: 270px;
+      max-width: 265px;
       width: 100%;
       min-height: 300px;
+      margin: 0 10px;
       p {
         color: #778590;
         font-size: 14px;
@@ -668,30 +744,80 @@ footer {
           }
         }
       }
-      .footerinterUpSide {
-        border-bottom: 1px solid #243141;
-        padding: 10px;
-        margin-bottom: 1rem;
-      }
+
       .footerinterDownSide {
+        display: inline-block;
+        width: 100%;
         li {
           float: left;
           list-style: none;
-          width:50%;
+          width: 50%;
           margin-bottom: 1rem;
           a {
             color: #a2b0bb;
             &:hover {
               text-decoration: none;
             }
-            figure{
+            figure {
               float: left;
               margin: 0 1rem 0 0;
             }
-            h6{
+            h6 {
               margin: 0;
             }
           }
+        }
+      }
+      .footerInnerContentFooterInter {
+        float: right;
+        width: 75%;
+        span {
+          color: #9eb1b8;
+        }
+        p {
+          color: #64717a;
+          font-size: 14px;
+        }
+        small {
+          color: #8f9ca5;
+          font-size: 15px;
+        }
+      }
+      li {
+        display: inline-block;
+      }
+      .innerTagWidgets {
+        display: inline-block;
+        li {
+          margin: 10px 0px;
+          display: inline-block;
+          a {
+            @include tagsWidgetBTN;
+          }
+        }
+      }
+      .usefulLinks {
+        ul {
+          list-style-type: square;
+          li {
+            width: 100%;
+            text-transform: capitalize;
+            display: list-item;
+            color: #88957f;
+            a {
+              color: #88959e;
+              &:hover {
+                text-decoration: none;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      .contactInfo {
+        position: relative;
+        li {
+          color: #a2b0bb;
         }
       }
     }
@@ -748,4 +874,9 @@ footer {
       margin-right: 0;
     }
   }
+}
+hr {
+  background: #253340;
+  height: 2px;
+  width: 100%;
 }

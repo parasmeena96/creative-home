@@ -74,42 +74,49 @@
                 </div>
             </div>
 
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#slider-animation" data-slide="prev">
-                <!-- <span class="carousel-control-prev-icon"></span> -->
-                <figure><img src="src/img/left.png" alt="leftArrow"></figure>
-            </a>
-            <a class="carousel-control-next" href="#slider-animation" data-slide="next">
-                <!-- <span class="carousel-control-next-icon"></span> -->
-                <figure><img src="src/img/right.png" alt="rightArrow"></figure>
-            </a>
+            <div class="controlOfMainSlider">
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#slider-animation" data-slide="prev">
+                    <!-- <span class="carousel-control-prev-icon"></span> -->
+                    <figure><img src="src/img/left.png" alt="leftArrow"></figure>
+                </a>
+                <a class="carousel-control-next" href="#slider-animation" data-slide="next">
+                    <!-- <span class="carousel-control-next-icon"></span> -->
+                    <figure><img src="src/img/right.png" alt="rightArrow"></figure>
+                </a>
+            </div>
 
         </div>
-        <div class="header_main d-flex mx-auto">
+        <div class="header_main mx-auto">
             <div class="container">
                 <div class="row">
-                    <div class="logo flex-fill">
-                        <a href="http://localhost:3000/">
-                            <figure><img src="src/img/logo.png" alt="logo"></figure>
-                        </a>
+                    <div class="innerOfHeader">
+                        <div class="logo">
+                            <a href="http://localhost:3000/">
+                                <figure><img src="src/img/logo.png" alt="logo"></figure>
+                            </a>
+                        </div>
+                        <nav id="mainMenu">
+                            <ul class="m-0 p-0">
+                                <li><a href="">home</a></li>
+                                <li><a href="">page</a></li>
+                                <li><a href="">portfolio</a></li>
+                                <li><a href="">blog</a></li>
+                                <li><a href="">shop</a></li>
+                                <li><a href="">travel</a></li>
+                                <li><a href="">shortCodes</a></li>
+                                <li><a href="">features</a></li>
+                                <li><a href="">contact</a></li>
+                                <li><a href="#" class="search_Icon"><i class="fa fa-search" aria-hidden="true"
+                                            id="seacrh_"></i></a>
+                                    <input type="text" name="search" id="searchPart" class="form-control">
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menuBar">
+                            <i class="fa fa-bars" id="menu_bar"></i>
+                        </div>
                     </div>
-                    <nav class="flex-grow-2">
-                        <ul>
-                            <li><a href="">home</a></li>
-                            <li><a href="">page</a></li>
-                            <li><a href="">portfolio</a></li>
-                            <li><a href="">blog</a></li>
-                            <li><a href="">shop</a></li>
-                            <li><a href="">travel</a></li>
-                            <li><a href="">shortCodes</a></li>
-                            <li><a href="">features</a></li>
-                            <li><a href="">contact</a></li>
-                            <li><a href="#" class="search_Icon"><i class="fa fa-search" aria-hidden="true"
-                                        id="seacrh_"></i></a>
-                                <input type="text" name="search" id="searchPart" class="form-control">
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
@@ -805,7 +812,7 @@
     <footer class="pt-5">
         <div class="container">
             <div class="row">
-                <div class="footerinnerContent d-flex justify-content-between">
+                <div class="footerinnerContent d-flex justify-content-between py-5">
                     <div class="footerInter">
                         <div class="footerinterUpSide">
                             <a href="#">
@@ -820,6 +827,7 @@
                                     more</a>
                             </div>
                         </div>
+                        <hr>
                         <div class="footerinterDownSide">
                             <ul class="m-0 p-0">
                                 <li>
@@ -868,9 +876,100 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footerInter"></div>
-                    <div class="footerInter"></div>
-                    <div class="footerInter"></div>
+                    <div class="footerInter">
+                        <h4 class="font-weight-light text-capitalize text-light">latest news</h4>
+                        <ul class="m-0 p-0">
+                            <li>
+                                <figure class="pull-left mr-3"><img src="src/img/yourBLOGTITLE.jpg" alt=""></figure>
+                                <div class="footerInnerContentFooterInter">
+                                    <span class="font-weight-bold text-capitalize"> your title blog here </span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <small>21 december, 2019</small>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <figure class="pull-left mr-3"><img src="src/img/yourBLOGTITLE-2.jpg" alt=""></figure>
+                                <div class="footerInnerContentFooterInter">
+                                    <span class="font-weight-bold text-capitalize"> your title blog here </span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <small>21 december, 2019</small>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <figure class="pull-left mr-3"><img src="src/img/yourBLOGTITLE-3.jpg" alt=""></figure>
+                                <div class="footerInnerContentFooterInter">
+                                    <span class="font-weight-bold text-capitalize"> your title blog here </span>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <small>21 december, 2019</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerInter">
+                        <h4 class="font-weight-light text-capitalize text-light">tags widget</h4>
+                        <div class="innerTagWidgets">
+                            <ul class="m-0 p-0">
+                                <li>
+                                    <ul class="m-0 p-0">
+                                        <li><a href="#">awesome</a></li>
+                                        <li><a href="#">beautiful</a></li>
+                                        <li><a href="#">flat design</a></li>
+                                        <li><a href="#">ios</a></li>
+                                        <li><a href="#">thenforest</a></li>
+                                        <li><a href="#">mass</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="usefulLinks">
+                            <ul class="m-0 p-0">
+                                <h4 class="font-weight-light text-capitalize text-light">useful links</h4>
+                                <li><a href="#"> web design resource </a></li>
+                                <hr>
+                                <li><a href="#"> help center </a></li>
+                                <hr>
+                                <li><a href="#"> download center </a></li>
+                                <hr>
+                                <li><a href="#"> user account </a></li>
+                                <hr>
+                                <li><a href="#"> support forum </a></li>
+                                <hr>
+                                <li><a href="#"> shortcodes page ready </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerInter">
+                        <div class="contactInfo">
+                            <h4 class="font-weight-light text-capitalize text-light">contact info</h4>
+                            <ul class="m-0 p-0">
+                                <li>
+                                    <span class="font-weight-bold text-capitalize"> office one </span><br>
+                                    <small>164 nguyen xi , binh thnha, ho chi minh,vietnam</small>
+                                </li>
+                                <hr>
+                                <li>
+                                    <span class="font-weight-bold text-capitalize"> office two </span><br>
+                                    <small>2983 Doctors Drive, Los Angeles, CA, California, 164 nguyen xi , binh thnha,
+                                        ho
+                                        chi minh,vietnam</small>
+                                </li>
+                                <hr>
+                                <li>
+                                    <span class="font-weight-bold text-capitalize"> phone number </span><br>
+                                    <small>+8497845635</small><br>
+                                    <small>+8497845635</small>
+                                </li>
+                                <hr>
+                                <li>
+                                    <span class="font-weight-bold text-capitalize"> email address </span><br>
+                                    <small>themeforest@gmail.com</small><br>
+                                    <small>themeforest@gmail.com</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1917,6 +2016,14 @@
 
         })(window.jQuery);
 // gallery slider
+
+
+//menu
+$(document).ready(function () {
+    $('#menu_bar').click(function () {
+        $('#mainMenu').toggle();
+    });
+});
     </script>
 </body>
 

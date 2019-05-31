@@ -30,5 +30,65 @@
 @mixin whiteOutLiniBTN {
   border: 2px solid white;
   background: transparent;
-
+  &:hover{
+    color: black !important;
+    border: 2px solid black !important;
+  }
 }
+@mixin tagsWidgetBTN {
+  border: 2px solid #a3b1ba;
+    background: transparent;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #a0b1bb;
+  &:hover {
+    background: #19bd9b;
+    border: 2px solid transparent;
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+
+
+// media query start here
+// large_destop
+@mixin large_desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+// large_destop
+
+//destop
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+//destop
+
+//tablets
+@mixin tablets {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+//tablets
+
+ // media for landscape_phones
+ @mixin landscape_phones {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+// media for landscape_phones
+
+// media for small iphones
+@mixin iphone5S {
+  @media only screen and (min-width: 320px) {
+    @content;
+  }
+}
+// media for small iphones
+
+// media query end here
