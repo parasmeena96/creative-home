@@ -13,12 +13,13 @@
 
 @mixin special_button {
   padding: 5px 10px;
-  border: 2px solid white;
+  border: 2px solid #40556a;
   background: transparent;
   color: white;
   text-transform: uppercase;
   font-weight: 600;
   transition: 0.7s;
+  margin: 0 5px;
   &:hover {
     background: #1bbc9b;
     border: 2px solid transparent;
@@ -49,6 +50,9 @@
   }
 }
 
+@mixin paddingY {
+  padding: 100px 0 !important;
+}
 
 // media query start here
 // large_destop
