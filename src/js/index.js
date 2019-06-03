@@ -26,4 +26,12 @@ document.getElementById('moar').onclick = function () {
     this.parentNode.insertBefore(section, this);
 };
 
+// form vaidation  
+
+function keepItSubmit(){
+    swal({
+        title: "Thanks for Registration!",
+        icon: "success",
+      });
+}
 

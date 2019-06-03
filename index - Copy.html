@@ -25,7 +25,6 @@
     <!-- OwlCarousel -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>creative</title>
 </head>
@@ -89,14 +88,13 @@
             </div>
 
         </div>
-        <div class="header_main mx-auto sticky">
+        <div class="header_main mx-auto">
             <div class="container">
                 <div class="row">
                     <div class="innerOfHeader">
                         <div class="logo">
                             <a href="http://localhost:3000/">
-                                <figure class="mb-0"><img src="src/img/logo.png" alt="logo" class="img-responsive">
-                                </figure>
+                                <figure><img src="src/img/logo.png" alt="logo" class="img-responsive"></figure>
                             </a>
                         </div>
                         <nav id="mainMenu">
@@ -817,7 +815,7 @@
                         </div>
                     </div>
                     <div class="keepContentRight keepContentItem">
-                        <form action="formSubmitted.html" method="GET" id="form_KeepIt">
+                        <form action="index.html" method="POST" id="form_KeepIt">
                             <div class="form-group">
                                 <input type="text" placeholder="Name" class="form-control" id="form_Name">
                                 <span id="errorName"></span>
@@ -2104,84 +2102,7 @@
         });
 
 
-        // form
-        $(function () {
-            $("#errorName").hide();
-            $("#errorEmail").hide();
-            $("#errorMessage").hide();
-            var nameError = false;
-            var emailError = false;
-            var messageError = false;
-            $("#form_Name").focusout(function () {
-                check_Name();
-            });
-            $("#form_Email").focusout(function () {
-                check_Email();
-            });
-            $("#form_Message").focusout(function () {
-                check_Message();
-            });
-            // for name
-            function check_Name() {
-                var name_length = $("#form_Name").val().length;
-                if (name_length < 5 || name_length > 20) {
-                    $("#errorName").html("Should be between 5-20 characters");
-                    $("#errorName").show();
-                    nameError = true;
-                } else {
-                    $("#errorName").hide();
-                }
-            }
-            // email
-            function check_Email() {
-                var _email = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-                if (_email.test($("#form_Email").val())) {
-                    $("#errorEmail").hide();
-                } else {
-                    $("#errorEmail").html("Invaild email address");
-                    $("#errorEmail").show();
-                    emailError = true;
-                }
-            }
-            // for  message
-            function check_Message() {
-                var message_length = $("#form_Message").val().length;
-                if (message_length < 50 || message_length > 150) {
-                    $("#errorMessage").html("Should be between 50-150 characters");
-                    $("#errorMessage").show();
-                    messageError = true;
-                } else {
-                    $("#errorMessage").hide();
-                }
-            }
 
-            $("#form_KeepIt").submit(function () {
-                nameError = false;
-                emailError = false;
-                messageError = false;
-
-                check_Name();
-                check_Email();
-                check_Message();
-
-                if (nameError == false && emailError == false && messageError == false) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-
-        });
-        //form
-
-        //header fixed
-        $(window).scroll(function () {
-            var sticky = $('.sticky'),
-                scroll = $(window).scrollTop();
-
-            if (scroll >= 100) sticky.addClass('fixed');
-            else sticky.removeClass('fixed');
-        });
     </script>
 </body>
 

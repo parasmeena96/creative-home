@@ -22,9 +22,10 @@ header {
   }
   .header_main {
     position: absolute;
-    top: 25px;
+    top: 0;
     width: 100%;
     z-index: 2;
+    line-height: 5;
     .logo {
       float: left;
       @include desktop {
@@ -1031,6 +1032,10 @@ $font-primary: #3d3d3d;
           color: white;
         }
       }
+      span {
+        text-transform: capitalize;
+        color: #ffffff;
+      }
     }
     .socialICOn {
       li {
@@ -1117,7 +1122,7 @@ $font-primary: #3d3d3d;
 }
 footer {
   background: #1a1c28;
-  padding: 80px 0;
+  padding: 80px 0 0;
   .footerinnerContent {
     display: inline-block;
     width: 100%;
@@ -1278,7 +1283,7 @@ footer {
         li {
           color: #a2b0bb;
         }
-        .contactInfoinnerPart{
+        .contactInfoinnerPart {
           padding-top: 40px;
         }
       }
@@ -1399,4 +1404,12 @@ hr {
     align-items: center;
     display: flex;
   }
+}
+
+
+.fixed {
+  position: fixed !important;
+  top:0; left:0;
+  width: 100%; 
+  background: #1a1c28b0;
 }
