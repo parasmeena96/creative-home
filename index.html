@@ -2106,6 +2106,8 @@
 
         // form
         $(function () {
+            // event.preventDefault();
+
             $("#errorName").hide();
             $("#errorEmail").hide();
             $("#errorMessage").hide();
@@ -2154,7 +2156,6 @@
                     $("#errorMessage").hide();
                 }
             }
-
             $("#form_KeepIt").submit(function () {
                 nameError = false;
                 emailError = false;
